@@ -6,7 +6,7 @@ const client = new Client({
   disableEveryone: true
 })
 
-client.login("NjU2NjUzOTA3NzAyOTcyNDM4.Xf5H0w.u0sPTAalHxkwxvx97hq8kY6OCzA")
+client.login("NjU2NjUzOTA3NzAyOTcyNDM4.Xf5J6g.EpuPgBni2zglL4_XMwfTsqry094")
 	.then(() => {
 		console.log('Success')
 	})
