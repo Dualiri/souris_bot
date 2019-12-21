@@ -1,3 +1,4 @@
+
 // const Discord = require("discord.js")
 const { Client } = require("discord.js")
 //const { command } = require("discord.js-comando")
@@ -5,6 +6,8 @@ const { Client } = require("discord.js")
 const client = new Client({
   disableEveryone: true
 })
+
+console.log(`Token: ${process.env.TOKEN}`)
 
 client.login(process.env.TOKEN)
 	.then(() => {
