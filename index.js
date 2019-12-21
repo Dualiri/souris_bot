@@ -7,9 +7,7 @@ const client = new Client({
   disableEveryone: true
 })
 
-console.log(`Token: ${process.env.TOKEN}`)
-
-client.login(process.env.TOKEN)
+client.login("NjU2NjUzOTA3NzAyOTcyNDM4.Xf5jmA.P__uFji7hCPdetds7-QzldPIk04")
 	.then(() => {
 		console.log('Success')
 	})
