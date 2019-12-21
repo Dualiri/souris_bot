@@ -1,4 +1,4 @@
- const Discord = require("discord.js")
+const Discord = require("discord.js")
 const { Client } = require("discord.js")
 //const { command } = require("discord.js-comando")
 
@@ -25,11 +25,11 @@ client.on("message", async message => {
         } else if (command === 'shanub') {
                 message.channel.send("|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|—|¯¯¯¯¯\\ \n| SHANUB ENCOMENDAS |» ¦  []  []  |\n|=¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯=)   ]  ------  ]\n¯¯(@@)¯¯¯(@@)¯¯¯¯¯¯¯¯¯¯¯¯¯(@)")
         } else if (command === 'firstei') {
-		message.channel.send("first nub")}
+		message.channel.send("First nub")
+	}
 
 
         console.log(`${message.author.username} said: ${message.content}`)
 })
 
 client.login("NjU2NjUzOTA3NzAyOTcyNDM4.Xfrlxw.c5ShifStInMnThMZ0TGFcYWL9ss").then(() => {}).catch(() => {})
- 
