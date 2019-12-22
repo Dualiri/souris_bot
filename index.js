@@ -1,6 +1,5 @@
-// const Discord = require("discord.js")
 const { Client } = require("discord.js")
-//const { command } = require("discord.js-comando")
+require('dotenv/config')
 const token = process.env.token
 
 const client = new Client({
@@ -33,6 +32,7 @@ client.on("message", async message => {
 	console.log(`${message.author.username} said: ${message.content}`)
 })
 
+console.log(`Token: ${token}`)
 client.login(token)
 	.then(() => {
 		console.log('Success')
