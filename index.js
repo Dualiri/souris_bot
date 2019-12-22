@@ -1,19 +1,11 @@
-
 // const Discord = require("discord.js")
 const { Client } = require("discord.js")
 //const { command } = require("discord.js-comando")
+const token = "NjU2NjUzOTA3NzAyOTcyNDM4.Xf5jmA.P__uFji7hCPdetds7-QzldPIk04"
 
 const client = new Client({
   disableEveryone: true
 })
-
-client.login("NjU2NjUzOTA3NzAyOTcyNDM4.Xf5jmA.P__uFji7hCPdetds7-QzldPIk04")
-	.then(() => {
-		console.log('Success')
-	})
-	.catch((err) => {
-		console.log(err)
-	})
 
 client.on("ready", () => {
   console.log("I'm online bb")
@@ -40,3 +32,11 @@ client.on("message", async message => {
 
 	console.log(`${message.author.username} said: ${message.content}`)
 })
+
+client.login(token)
+	.then(() => {
+		console.log('Success')
+	})
+	.catch((err) => {
+		console.log(err)
+	})
