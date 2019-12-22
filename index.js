@@ -1,7 +1,7 @@
 // const Discord = require("discord.js")
 const { Client } = require("discord.js")
 //const { command } = require("discord.js-comando")
-const token = "NjU2NjUzOTA3NzAyOTcyNDM4.Xf5jmA.P__uFji7hCPdetds7-QzldPIk04"
+const token = process.env.token
 
 const client = new Client({
   disableEveryone: true
