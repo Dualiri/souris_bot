@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,11 @@
   "homepage": "https://github.com/Dualiri/souris_bot#readme",
   "dependencies": {
     "discord.js": "^11.5.1",
-    "dotenv": "^8.2.0"
+    "discord.js-commando": "^0.10.0",
+    "dotenv": "^8.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
