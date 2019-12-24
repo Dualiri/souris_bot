@@ -1,35 +1,43 @@
- const Discord = require("discord.js")
-const { Client } = require("discord.js")
-//const { command } = require("discord.js-comando")
+const { Client } = require('discord.js-commando')
+const path = require('path')
+require('dotenv/config')
+
+const luke = '339176052633108480'
+const du = '160922718877777920' 
 
 const client = new Client({
-  disableEveryone: true
+	commandPrefix: '.',
+	owner: [du, luke],
+	invite: 'https://discord.gg/jVmW6Z'
 })
 
-client.on("ready", () => {
-  console.log("I'm online bb")
+client.registry
+.registerDefaultTypes()
+.registerGroups([
+	['moderation', 'Admin\'s commands.'],
+	['mice', 'Mice\' commands.']
+])
+.registerDefaultGroups()
+.registerDefaultCommands()
+.registerCommandsIn(path.join(__dirname, 'commands'))
+
+client.once('ready', () => {
+	console.log(`Logado como ${client.user.tag}(${client.user.id})`)
+	client.user.setActivity('Pedra na Cruz')
 })
+
+client.on('error', console.error)
 
 client.on("message", async message => {
-        if(message.author.bot) return
-        if(message.channel.type === "dm") return
+	if(message.author.bot) return
 
-        //let command = message.content[0]
-        //console.log(command)
-        let command = message.content.toLowerCase()
-
-        //if (command !== "/") return
-
-        if (command === "queijo") {
-                message.channel.send("Dou 10 conto nele")
-        } else if (command === 'shanub') {
-                message.channel.send("|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|—|¯¯¯¯¯\\ \n| SHANUB ENCOMENDAS |» ¦  []  []  |\n|=¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯=)   ]  ------  ]\n¯¯(@@)¯¯¯(@@)¯¯¯¯¯¯¯¯¯¯¯¯¯(@)")
-        } else if (command === 'firstei') {
-		message.channel.send("first nub")}
-
-
-        console.log(`${message.author.username} said: ${message.content}`)
+	console.log(`${message.author.username}: ${message.content.toLowerCase()}`)
 })
 
-client.login("NjU2NjUzOTA3NzAyOTcyNDM4.Xfrlxw.c5ShifStInMnThMZ0TGFcYWL9ss").then(() => {}).catch(() => {})
- 
+client.login(process.env.token)
+	.then(() => {
+		// console.log('Success')
+	})
+	.catch((err) => {
+		console.log(err)
+	})
